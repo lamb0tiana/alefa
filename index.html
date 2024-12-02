@@ -1,32 +1,96 @@
-<!doctype html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Emailing signature</title>
-    <!-- Lien vers le fichier CSS de Tailwind (assurez-vous de l'inclure dans votre projet) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Email</title>
+    <style>
+        /* Inline media queries for clients like Gmail and Outlook */
+        @media screen and (max-width: 600px) {
+            .sm-block {
+                display: block !important;
+                width: 100% !important;
+            }
+
+            .sm-center {
+                text-align: center !important;
+            }
+
+            .sm-hidden {
+                display: none !important;
+            }
+
+            .sm-px-4 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+            }
+        }
+    </style>
 </head>
-<body>
-<header class="flex justify-between items-center h-32 bg-black">
-    <!-- Section gauche avec texte centré et image de fond -->
-    <div class="w-2/5 h-full bg-cover bg-center flex  items-center" style="background-image: url('STONE.svg');">
-        <a class="text-white text-sm text-center shadow-lg p-5">https://www.easyplandetravail.com</a>
-    </div>
+<body class="bg-gray-100 font-sans">
+<table class="w-full bg-gray-100" cellpadding="0" cellspacing="0">
+    <tr>
+        <td align="center">
+            <table class="w-full max-w-[800px] bg-white" cellpadding="0" cellspacing="0">
+                
+                <tr>
+                    <td class="bg-black text-white">
+                        <table class="w-full" cellpadding="0" cellspacing="0">
+                            <tr>
+                                
+                                <td class="w-[40%] h-[100px] bg-cover bg-center text-center"
+                                    style="background-image: url('STONE.svg');">
+                                    <a href="https://www.easyplandetravail.com" class="text-white text-sm">https://www.easyplandetravail.com</a>
+                                </td>
+                                
+                                <td class="w-[60%] text-right pr-6">
+                                    <img src="LOGO_GROUP.svg" alt="Logo" class="inline-block max-w-full h-auto">
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
 
-    <!-- Section droite avec logo -->
-    <div class="w-3/5 flex justify-end items-center">
-        <img src="LOGO_GROUP.svg" alt="Logo" class="max-w-full h-auto pr-8">
-    </div>
-</header>
-<div class="flex justify-between">
-    <div id="easyplan" class="flex-grow-0">
-        easyplan
-    </div>
-    <div class="">
-        <p class="uppercase font-black">Anatolie charpentier</p>
-    </div>
-</div>
+                
+                <tr>
+                    <td class="p-6">
+                        <table class="w-full" cellpadding="0" cellspacing="0">
+                            <tr>
+                                
+                                <td class="w-[40%] text-center align-top p-4 sm-block">
+                                    <img src="logo_stacked.svg" alt="CB Surfaces Logo" class="mx-auto">
+                                </td>
+                                
+                                <td class="w-[1px] bg-gray-300 sm-hidden"></td>
+                                
+                                <td class="w-[69%] text-left align-top p-4 sm-block sm-px-4">
+                                    <h2 class="text-xl font-bold">Baptiste Pelouin</h2>
+                                    <div class="grid grid-cols-2">
+                                        <div>
+                                            <p class="text-sm text-gray-600 mt-1 text-black">Poste</p>
+                                            <p class="text-sm text-gray-600 mt-1">Directeur Général</p>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm text-gray-700"><strong>Email :</strong>
+                                                <a href="mailto:direction@cbsurfaces.com" class="text-blue-600 underline">direction@cbsurfaces.com</a>
+                                            </p>
+                                        </div>
 
-<script type="module" src="/src/main.ts"></script>
+                                        <p class="mt-4 text-sm text-gray-700"><strong>Adresse :</strong> 39 Avenue de
+                                            Friedland</p>
+                                    </div>
+
+
+                                    <p class="text-sm text-gray-700"><strong>Mobile :</strong> +33 6 25 05 31 83</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
+<script type="module" src="src/main.ts"></script>
 </body>
 </html>
