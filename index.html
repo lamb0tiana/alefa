@@ -1,96 +1,137 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Email</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet">
+    <title>Signature Email</title>
     <style>
-        /* Inline media queries for clients like Gmail and Outlook */
+
+        .user_data span, .user_data a {
+            display: block;
+            color: #666666;
+        }
+
+        .user_data p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            border: none;
+            width: 100%;
+        }
+
+        .bottom_logo {
+            display: none;
+        }
+
+        .user_data {
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .user_data::before {
+            content: '';
+            position: absolute;
+            top: -4.5em;
+            left: 3em;
+            width: 2px;
+            height: 13.5em;
+            background-color: gray;
+        }
+
         @media screen and (max-width: 600px) {
-            .sm-block {
+            .user_data {
                 display: block !important;
-                width: 100% !important;
+                padding-left: 2em !important;
             }
-
-            .sm-center {
-                text-align: center !important;
+            .user_data::before {
+              display: none;
             }
-
-            .sm-hidden {
+            .top_logo {
                 display: none !important;
             }
 
-            .sm-px-4 {
-                padding-left: 1rem !important;
-                padding-right: 1rem !important;
+            .bottom_logo {
+                display: block !important;
+                margin: auto;
+            }
+
+
+            .logo_group{
+                padding-top: 2em;
+            }
+            .top_title a{
+                margin-left: 2.75em;
             }
         }
     </style>
 </head>
-<body class="bg-gray-100 font-sans">
-<table class="w-full bg-gray-100" cellpadding="0" cellspacing="0">
+<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center;">
+<table style="margin: 20px 0; max-width: 760px; background-color: #000000; color: #ffffff;">
+    <!-- Header -->
     <tr>
-        <td align="center">
-            <table class="w-full max-w-[800px] bg-white" cellpadding="0" cellspacing="0">
-                
+        <td class="top_title" style="width: 50%; text-align: center;padding-right: 20%; background: url(./public/STONE.svg) no-repeat center right / cover; height: 100px;">
+            <a href="https://www.cbsurfaces.com" style="color: #ffffff; text-decoration: none; font-size: 14px;">
+                www.cbsurfaces.com
+            </a>
+        </td>
+        <td style="text-align: right; padding-right: 20px;" class="logo_group">
+            <img src="./public/LOGO_GROUP.svg" alt="Logo" style="max-width: 100%; height: auto;">
+        </td>
+    </tr>
+
+    <!-- Main Content -->
+    <tr style="background: #ffffff">
+        <td colspan="2">
+            <table style="width: 100%;" class="content">
                 <tr>
-                    <td class="bg-black text-white">
-                        <table class="w-full" cellpadding="0" cellspacing="0">
+                    <!-- Logo -->
+                    <td style="text-align: center;width: 30%" class="top_logo">
+                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo" style="max-width: 100%; height: auto;">
+                    </td>
+                    <!-- Content -->
+                    <td style="padding:20px 0 20px 5em;" class="user_data">
+                        <table style="color: #000000">
+                            <tr colspan="2">
+                                <td style="text-align: left; text-transform: uppercase; margin: auto;">
+                                    <h2 style="font-size: 1em; font-weight: 600; margin: 0;font-family: 'Roboto Serif', serif;"> Baptiste Pelouin</h2>
+                                </td>
+                            </tr>
+
                             <tr>
-                                
-                                <td class="w-[40%] h-[100px] bg-cover bg-center text-center"
-                                    style="background-image: url('STONE.svg');">
-                                    <a href="https://www.easyplandetravail.com" class="text-white text-sm">https://www.easyplandetravail.com</a>
+                                <td>
+                                    <p>
+                                        Poste <span style="display:block; color: #666666;">Directeur Général</span>
+                                    </p>
                                 </td>
-                                
-                                <td class="w-[60%] text-right pr-6">
-                                    <img src="LOGO_GROUP.svg" alt="Logo" class="inline-block max-w-full h-auto">
-                                </td>
+                                <td><p>
+                                    Email <a href="mailto:direction@cbsurfaces.com" style=" text-decoration: none;">
+                                    direction@cbsurfaces.com
+                                </a>
+                                </p></td>
+                            </tr>
+                            <tr>
+                                <td><p>Adresse <span>39 Avenue de Friedland</span>
+                                </p></td>
+                                <td><p>Mobile <span>+33 6 25 05 31 83</span>
+                                </p></td>
                             </tr>
                         </table>
                     </td>
-                </tr>
-
-                
-                <tr>
-                    <td class="p-6">
-                        <table class="w-full" cellpadding="0" cellspacing="0">
-                            <tr>
-                                
-                                <td class="w-[40%] text-center align-top p-4 sm-block">
-                                    <img src="logo_stacked.svg" alt="CB Surfaces Logo" class="mx-auto">
-                                </td>
-                                
-                                <td class="w-[1px] bg-gray-300 sm-hidden"></td>
-                                
-                                <td class="w-[69%] text-left align-top p-4 sm-block sm-px-4">
-                                    <h2 class="text-xl font-bold">Baptiste Pelouin</h2>
-                                    <div class="grid grid-cols-2">
-                                        <div>
-                                            <p class="text-sm text-gray-600 mt-1 text-black">Poste</p>
-                                            <p class="text-sm text-gray-600 mt-1">Directeur Général</p>
-                                        </div>
-                                        <div>
-                                            <p class="text-sm text-gray-700"><strong>Email :</strong>
-                                                <a href="mailto:direction@cbsurfaces.com" class="text-blue-600 underline">direction@cbsurfaces.com</a>
-                                            </p>
-                                        </div>
-
-                                        <p class="mt-4 text-sm text-gray-700"><strong>Adresse :</strong> 39 Avenue de
-                                            Friedland</p>
-                                    </div>
-
-
-                                    <p class="text-sm text-gray-700"><strong>Mobile :</strong> +33 6 25 05 31 83</p>
-                                </td>
-                            </tr>
-                        </table>
+                    <td style="text-align: center;width: 30%" class="bottom_logo">
+                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo" style="max-width: 100%; height: auto;">
                     </td>
                 </tr>
             </table>
         </td>
     </tr>
 </table>
-<script type="module" src="src/main.ts"></script>
 </body>
 </html>
