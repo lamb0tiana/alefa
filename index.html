@@ -1,85 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-          rel="stylesheet">
-    <title>Signature Email</title>
-    <link rel="stylesheet" href="./public/signature.css">
-</head>
-<body style="margin: 0; padding: 0; background-color: #f4f4f4; font-family: Arial, sans-serif; height: 100vh; display: flex; justify-content: center; align-items: center;">
-<table style="margin: 20px 0; max-width: 760px; background-color: #000000; color: #ffffff;width: 100%;border-spacing: 0;border-collapse: collapse;border: none;">
+<table style="margin: 20px 0; max-width: 760px; background-color: #000000; color: #ffffff; width: 100%; border-spacing: 0; border-collapse: collapse; border: none;">
     <!-- Header -->
     <thead>
-    <tr class="header">
-        <td style="width: 50%; text-align: center;padding-right: 20%; background: url(./public/STONE.svg) no-repeat center right / cover; height: 100px;">
+    <tr style="background: url('./STONE.svg') no-repeat center right / cover; height: 100px;">
+        <td style="width: 50%; text-align: center; padding-right: 20%; font-family: Arial, sans-serif;">
             <a href="https://www.cbsurfaces.com" style="color: #ffffff; text-decoration: none; font-size: 14px;">
                 www.cbsurfaces.com
             </a>
         </td>
-        <td style="text-align: right; padding-right: 20px;" class="logo_group">
+        <td style="text-align: right; padding-right: 20px;">
             <img src="./public/LOGO_GROUP.svg" alt="Logo" style="max-width: 100%; height: auto;">
-        </td>
-        <td style="display: none;">
-            <a href="https://www.cbsurfaces.com" style="color: #ffffff; text-decoration: none; font-size: 14px;">
-                www.cbsurfaces.com
-            </a>
         </td>
     </tr>
     </thead>
     <!-- Main Content -->
     <tbody>
-    <tr style="background: #ffffff">
+    <tr style="background: #ffffff;">
         <td colspan="2">
-            <table style="width: 100%;border-spacing: 0;border-collapse: collapse;border: none;" class="content">
+            <table style="width: 100%; border-spacing: 0; border-collapse: collapse; border: none;">
                 <tr>
                     <!-- Logo -->
-                    <td style="text-align: center;width: 30%" class="top_logo">
-                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo"
-                             style="max-width: 100%; height: auto;">
+                    <td style="text-align: center; width: 30%;">
+                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo" style="max-width: 100%; height: auto;">
                     </td>
                     <!-- Content -->
-                    <td style="padding:20px 0 20px 5em;position: relative;" class="user_data">
-                        <table style="color: #000000;width: 100%;border-spacing: 0;border-collapse: collapse;border: none;">
-                            <tr colspan="2">
-                                <td style="text-align: left; text-transform: uppercase; margin: auto;" colspan="2">
-                                    <h2 style="font-size: 1em; font-weight: 600; margin: 0;font-family: 'Roboto Serif', serif;">
-                                        Baptiste Pelouin</h2>
+                    <td style="padding: 20px 0 20px 5em; font-family: Arial, sans-serif; position: relative;">
+                        <div style="position: absolute; top: -4.5em; left: 3em; width: 2px; height: 13.5em; background-color: gray;"></div>
+                        <table style="color: #000000; width: 100%; border-spacing: 0; border-collapse: collapse;">
+                            <tr>
+                                <td colspan="2" style="text-align: left; text-transform: uppercase; margin: auto;">
+                                    <h2 style="font-size: 1em; font-weight: 600; margin: 0; font-family: 'Roboto Serif', serif;">
+                                        Baptiste Pelouin
+                                    </h2>
                                 </td>
                             </tr>
-
                             <tr>
-                                <td>
-                                    <p style="font-size: 14px; margin: 10px 0;">
-                                        Poste <span style="display:block; color: #666666;">Directeur Général</span>
-                                    </p>
+                                <td style="font-size: 14px; margin: 10px 0;">
+                                    Poste
+                                    <span style="display: block; color: #666666;">Directeur Général</span>
                                 </td>
-                                <td>
-                                    <p style="font-size: 14px; margin: 10px 0;">
-                                    Email <a href="mailto:direction@cbsurfaces.com" style=" text-decoration: none;display: block;color: #666666">
-                                    direction@cbsurfaces.com
-                                </a>
-                                </p></td>
+                                <td style="font-size: 14px; margin: 10px 0;">
+                                    Email
+                                    <a href="mailto:direction@cbsurfaces.com" style="text-decoration: none; display: block; color: #666666;">
+                                        direction@cbsurfaces.com
+                                    </a>
+                                </td>
                             </tr>
                             <tr>
-                                <td>
-                                    <p style="font-size: 14px; margin: 10px 0;">
-                                        Adresse <span style="display:block; color: #666666;">39 Avenue de Friedland</span>
-                                    </p>
+                                <td style="font-size: 14px; margin: 10px 0;">
+                                    Adresse
+                                    <span style="display: block; color: #666666;">39 Avenue de Friedland</span>
                                 </td>
-                                <td>
-                                    <p style="font-size: 14px; margin: 10px 0;">
-                                        Mobile <span style="display:block; color: #666666;">+33 6 25 05 31 83</span>
-                                </p></td>
+                                <td style="font-size: 14px; margin: 10px 0;">
+                                    Mobile
+                                    <span style="display: block; color: #666666;">+33 6 25 05 31 83</span>
+                                </td>
                             </tr>
                         </table>
                     </td>
-                    <td style="text-align: center;width: 30%;padding-bottom: 1em;" class="bottom_logo">
-                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo"
-                             style="max-width: 100%; height: auto;">
+                    <td style="text-align: center; width: 30%; display: none;">
+                        <img src="./public/logo_stacked.svg" alt="CB Surfaces Logo" style="max-width: 100%; height: auto;">
                     </td>
                 </tr>
             </table>
@@ -87,5 +66,3 @@
     </tr>
     </tbody>
 </table>
-</body>
-</html>

@@ -1,6 +1,4 @@
 .user_data {
-
-
   &::before{
     content: '';
     position: absolute;
@@ -11,9 +9,6 @@
     background-color: gray;
   }
 }
-
-
-
 .bottom_logo {
   display: none;
 }
